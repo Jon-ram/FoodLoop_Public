@@ -56,7 +56,7 @@ El usuario ingresa los ingredientes con los que cuenta y el sistema, apoyado en 
 
 ---
 
-## 📚 Documentación
+## 📚 [Documentación](https://github.com/Jon-ram/FoodLoop_Public/tree/main/Documentation)
 
 Entregables generados durante el proyecto:
 

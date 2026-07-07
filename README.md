@@ -77,7 +77,7 @@ Entregables generados durante el proyecto:
 - Business Model Canvas (socios clave, propuesta de valor, segmentos de usuario).
 - Documento de Design Thinking — fases de Empatizar y Definir, basado en encuesta real a usuarios (14 respuestas).
 - Product Backlog priorizado y definición de roles e hitos (Scrum).
-- Prototipo de alta fidelidad en Figma (wireframes + prototipo interactivo).
+-[ Prototipo de alta fidelidad en Figma (wireframes + prototipo interactivo).](https://www.figma.com/design/3ULsuEsxu20uYFEtoq3jGw/Sin-t%C3%ADtulo?node-id=0-1&t=ZUcyQTndJmeOpIOG-1 ahora con este  Prototipo de alta fidelidad en Figma (wireframes + prototipo interactivo).)
 - Bitácora de actividades del equipo.
 - Plan de Acuerdos de Comunicación del Proyecto.
 - Propuesta de algoritmos de Machine Learning aplicados a FoodLoop.

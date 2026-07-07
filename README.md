@@ -43,8 +43,11 @@ El alcance contempla el desarrollo completo de la plataforma web (frontend, back
 | Control de versiones | GitHub (estrategia Git Flow) |
 | Gestión de tareas | Trello / ClickUp |
 | Comunicación | WhatsApp, Google Meet |
-| Documentación | Google Docs / Drive |
+| Documentación | Google Docs / Drive, Swagger (`/api-docs`) |
 | Redes remotas | Tailscale (entornos locales de base de datos) |
+| Autenticación y seguridad | JWT, bcrypt, express-validator |
+| Carga de archivos | Multer (detección de ingredientes por imagen) |
+| Testing (roadmap) | Jest / Supertest |
 
 ---
 
@@ -53,6 +56,16 @@ El alcance contempla el desarrollo completo de la plataforma web (frontend, back
 **FoodLoop** es una plataforma web que utiliza inteligencia artificial para generar recetas personalizadas a partir de los ingredientes que el usuario tiene disponibles, con el objetivo de reducir el desperdicio de alimentos en los hogares.
 
 El usuario ingresa los ingredientes con los que cuenta y el sistema, apoyado en modelos de IA (Google Gemini como proveedor principal y OpenAI como respaldo), genera recetas prácticas y adaptadas a esos insumos. La plataforma integra además fuentes de datos externas (Spoonacular, Edamam) para enriquecer las recomendaciones.
+
+**Funcionalidades actuales del backend:**
+
+- Registro y login de usuarios con validación de datos.
+- Autenticación con JWT y middleware de rutas protegidas.
+- Generación de recetas mediante IA, con guardado en PostgreSQL.
+- Detección de ingredientes a partir de imágenes (carga de archivos con Multer).
+- Guardado y consulta de recetas e ingredientes, incluyendo marcado de favoritos.
+- Rate limiting y registro de intentos de login para mitigar ataques de fuerza bruta.
+- Documentación de la API con Swagger disponible en `/api-docs`.
 
 ---
 
@@ -68,21 +81,171 @@ Entregables generados durante el proyecto:
 - Bitácora de actividades del equipo.
 - Plan de Acuerdos de Comunicación del Proyecto.
 - Propuesta de algoritmos de Machine Learning aplicados a FoodLoop.
+- Documentación técnica de base de datos (esquema, modelo entidad-relación, estrategia de respaldo y calidad de datos).
+- Documentación de la API REST con Swagger (`/api-docs`), generada con JSDoc en `src/routes/`.
 
 ---
 
 ## 🏗️ Estructura del Proyecto
 
+Vista general del monorepo:
+
 ```
 FoodLoop/
 ├── frontend/          # Aplicación React + TypeScript
-├── backend/           # Servicios Node.js/Express y FastAPI
-├── database/          # Modelo entidad-relación PostgreSQL
+├── backend/           # Servicios Node.js/Express (detalle abajo)
+├── database/          # Esquema y modelo entidad-relación PostgreSQL
 ├── docs/              # Documentación técnica y académica
 └── design/            # Wireframes y prototipos de Figma
 ```
 
-> Nota: estructura referencial basada en la arquitectura descrita (frontend, backend, base de datos e IA); puede ajustarse según la organización real del repositorio en GitHub.
+### Arquitectura de carpetas del Backend
+
+```
+├── 📁 config
+│   └── 📄 database.js
+├── 📁 database
+│   ├── 📄 schema.sql
+│   └── 📄 seed_demo.sql
+├── 📁 models
+│   ├── 📄 GeminiUsage.js
+│   ├── 📄 Ingredient.js
+│   ├── 📄 Recipe.js
+│   ├── 📄 SitiVisit.js
+│   ├── 📄 Subscription.js
+│   └── 📄 User.js
+├── 📁 src
+│   ├── 📁 controllers
+│   │   ├── 📄 adminController.js
+│   │   ├── 📄 authController.js
+│   │   ├── 📄 ingredientController.js
+│   │   └── 📄 recipeController.js
+│   ├── 📁 middlewares
+│   │   ├── 📄 auth.js
+│   │   ├── 📄 isAdmin.js
+│   │   ├── 📄 trackVisit.js
+│   │   ├── 📄 upload.js
+│   │   └── 📄 validate.js
+│   ├── 📁 routes
+│   │   ├── 📄 admin.js
+│   │   ├── 📄 auth.js
+│   │   ├── 📄 ingredients.js
+│   │   └── 📄 recipes.js
+│   ├── 📁 services
+│   │   ├── 📄 analyticsService.js
+│   │   ├── 📄 gemineiaservice.js
+│   │   └── 📄 openiaservice.js
+│   └── 📄 swagger.js
+├── ⚙️ .env.example.txt
+├── ⚙️ .gitignore
+├── 📄 app.js
+├── ⚙️ package-lock.json
+└── ⚙️ package.json
+```
+
+Esta vista ayuda a ubicarse rápido en el código y en qué carpeta añadir nuevas funcionalidades.
+
+---
+
+## 🗄️ Base de Datos
+
+### ¿Por qué PostgreSQL?
+
+| Característica | Beneficio para FoodLoop |
+|---|---|
+| Open Source | Sin costos de licencia, ideal para desarrollo |
+| ACID Compliant | Garantiza integridad en transacciones críticas |
+| Relacional | Perfecto para datos estructurados con relaciones claras |
+| JSON / JSONB Support | Permite almacenar respuestas de IA en formato semi-estructurado |
+| Escalabilidad | Soporta desde proyectos pequeños hasta aplicaciones empresariales |
+| Comunidad activa | Amplia documentación y soporte |
+| Seguridad | Sistema robusto de usuarios, roles y permisos |
+
+### Tablas principales
+
+| Tabla | Propósito |
+|---|---|
+| `users` | Usuarios del sistema: autenticación, roles y verificación de email |
+| `login_attempts` | Control de intentos de login (detección de fuerza bruta) |
+| `ingredients` | Catálogo normalizado de ingredientes |
+| `user_ingredients` | Despensa personal del usuario (cantidad, unidad, caducidad) |
+| `recipes` | Recetas generadas por la IA para cada usuario |
+| `recipe_ingredients` | Ingredientes requeridos por cada receta |
+| `recipe_steps` | Pasos de preparación ordenados |
+| `subscriptions` | Suscripciones premium (estado, vigencia, pago) |
+| `site_visits` | Registro de visitas (autenticadas y anónimas) para analítica |
+| `gemini_usage` | Monitoreo del consumo de la API de IA (tokens y costo estimado) |
+
+### Modelo Entidad-Relación (resumen de relaciones)
+
+- `users` → `recipes`, `user_ingredients`, `login_attempts`, `subscriptions`, `site_visits`, `gemini_usage` — todas 1:N
+- `recipes` → `recipe_ingredients`, `recipe_steps` — 1:N
+- `ingredients` → `user_ingredients` — 1:N
+
+### Estrategia de Respaldo
+
+| Tipo | Frecuencia | Retención | Propósito |
+|---|---|---|---|
+| Diario | Cada 24h (7:00 AM) | 7 días | Recuperación ante fallos recientes |
+| Semanal | Cada lunes | 30 días | Puntos de restauración intermedios |
+| Mensual | Primer día del mes | 365 días | Archivo histórico y auditoría |
+
+Scripts automatizados: `backup_postgres.bat`, `verify_backup.bat`, `maintenance_postgres.bat` (VACUUM/ANALYZE/REINDEX semanal) y `restore_postgres.bat` para recuperación manual ante desastres. Tiempo de recuperación estimado (RTO): **< 15 minutos**.
+
+### Calidad de los Datos
+
+Criterios aplicados: exactitud (restricciones CHECK y validaciones en backend), integridad (PK/FK con CASCADE/SET NULL), disponibilidad (respaldos en 3 niveles), confiabilidad (transacciones ACID y triggers de auditoría), utilidad (purga automática de datos obsoletos), accesibilidad (roles con privilegios mínimos) y normalización (diseño hasta 3NF).
+
+---
+
+## 🔒 Seguridad
+
+- **Autenticación:** tokens JWT firmados con `JWT_SECRET`; rutas protegidas mediante middleware `auth`.
+- **Hashing de contraseñas:** `bcrypt` con rondas configurables (`BCRYPT_ROUNDS`).
+- **Validación de entradas:** `express-validator` en registro y login.
+- **Control de acceso:** campo `role` en `users` + middleware `isAdmin` para rutas administrativas.
+- **Protección contra abuso:** rate limiting y registro de intentos en `login_attempts`.
+- **Recuperación de contraseña:** tokens de un solo uso (`reset_password_token`, `reset_password_expires`); requiere configuración SMTP.
+- **Buenas prácticas:** claves y secretos gestionados vía `.env`, nunca subidos al repositorio.
+
+---
+
+## 🚀 Cómo Usar (API)
+
+```bash
+git clone <url-del-repositorio>
+cd FoodLoop
+npm install
+```
+
+Crear la base de datos y cargar esquema:
+
+```bash
+createdb -U postgres foodloop
+psql -U postgres -d foodloop -f database/schema.sql
+psql -U postgres -d foodloop -f database/seed_demo.sql
+```
+
+Iniciar servidor (`npm run dev`) y consultar la documentación interactiva en `http://localhost:3001/api-docs`.
+
+**Flujo principal:** registro (`POST /api/auth/register`) → login (`POST /api/auth/login`, obtiene token JWT) → generar recetas (`POST /api/recipes/generate`, requiere token) → consultar recetas guardadas (`GET /api/recipes/user`) → detectar ingredientes por imagen (`POST /api/ingredients/detect`).
+
+---
+
+## ✅ Estado de Funcionalidades (Backend)
+
+| Funcionalidad | Estado |
+|---|---|
+| Registro de usuarios | ✅ Completo |
+| Login con JWT | ✅ Completo |
+| Rate limiting | ✅ Completo |
+| Generar recetas con IA | ✅ Completo |
+| Guardar recetas en BD | ✅ Completo |
+| Ver recetas guardadas | ✅ Completo |
+| Marcar favoritos | ✅ Completo |
+| Detectar ingredientes en imagen | ✅ Completo |
+| Guardar ingredientes en catálogo | ⏳ Pendiente |
+| Guardar ingredientes en despensa | ⏳ Pendiente |
 
 ---
 
@@ -95,6 +258,17 @@ FoodLoop/
 | Christian Paúl Rodríguez Pérez | Líder de Backend e IA | Microservicios con FastAPI, integración con patrón Adapter para Google Gemini, lógica de negocio |
 | Jonathan Baldemar Ramírez Reyes | Líder de Base de Datos | Modelo Entidad-Relación en PostgreSQL, optimización de consultas, triggers, seguridad de datos |
 | Todo el equipo | Gestión y Documentación | Redacción y mantenimiento colectivo de documentación técnica, reportes y bitácoras |
+
+### Contribuidores (GitHub)
+
+| Integrante | GitHub | Rol |
+|---|---|---|
+| Jonathan Baldemar Ramírez Reyes | [@Jon-ram](https://github.com/Jon-ram) | Desarrollador de Bases de Datos |
+| Christian Paúl Rodríguez Pérez | [@ChrisRodriguez-0430](https://github.com/ChrisRodriguez-0430) | Desarrollador Backend |
+| Josué Martínez Otero | [@Josue-Martinez-Otero](https://github.com/Josue-Martinez-Otero) | Desarrollador Frontend |
+| Antonio Ocpaco Dolores | [@agustin963](https://github.com/agustin963) | Documentador |
+
+> Nota: José Agustín Jiménez Castillo consta como Desarrollador Frontend y Apoyo en el Plan de Acuerdos, pero no aparece en el listado de contribuidores del repositorio; Antonio Ocpaco Dolores aparece como Documentador en GitHub sin figurar en la matriz de roles original. Se recomienda validar con el equipo la lista definitiva de integrantes.
 
 ---
 
@@ -191,3 +365,11 @@ Las "adquisiciones" del proyecto se centran en la contratación/uso de servicios
 - Configurar entornos locales y tablero de monitoreo digital.
 - Reforzar la integración del proveedor de IA en el flujo de generación de recetas.
 - Actualizar la documentación técnica del proyecto.
+
+**Roadmap técnico (Backend):**
+- Completar guardado automático de ingredientes detectados en `user_ingredients` y en el catálogo `ingredients`.
+- Añadir pruebas unitarias y e2e (Jest/Supertest).
+- Implementar refresh tokens y mejorar la estrategia de sesiones.
+- Migrar el almacenamiento de imágenes a un servicio en la nube (Cloudinary/S3) en lugar de base64.
+- Finalizar el flujo de envío de emails en producción (SMTP seguro) para recuperación de contraseña.
+- Desarrollar el frontend web en React.

@@ -1,1 +1,193 @@
-# FoodLoop_Public
+# 🍃 FoodLoop
+
+Plataforma web con Inteligencia Artificial para la generación de recetas personalizadas a partir de los ingredientes disponibles, orientada a reducir el desperdicio de alimentos en los hogares.
+
+---
+
+## 📌 Inicio del Proyecto
+
+FoodLoop nace de una problemática cotidiana: las personas suelen tener ingredientes disponibles en casa pero no saben cómo combinarlos antes de que se echen a perder, lo que contribuye al desperdicio de alimentos.
+
+El proyecto se desarrolla desde el cuatrimestre anterior, periodo en el cual se construyó un **prototipo funcional** que fue presentado en la feria de ciencias. En el cuatrimestre actual, el trabajo se ha enfocado en la documentación formal, el refinamiento del diseño y el fortalecimiento de la arquitectura técnica del sistema.
+
+- **Periodo de este informe:** 01/06/2026 - 30/06/2026
+- **Avance general del proyecto:** ~75%
+- **Riesgo general:** Bajo
+- **Cumplimiento de cronograma:** En tiempo
+
+---
+
+## 🎯 Gestión de Alcance
+
+El alcance del proyecto se definió mediante metodología ágil (Scrum), incluyendo:
+
+- Levantamiento de requerimientos funcionales y no funcionales.
+- Definición del alcance y visión del producto.
+- Elaboración del **Product Backlog**, con historias de usuario, criterios de aceptación y priorización según objetivos de sprint.
+- Definición de roles e hitos del equipo.
+
+El alcance contempla el desarrollo completo de la plataforma web (frontend, backend, base de datos e integración con IA), así como toda la documentación académica y técnica correspondiente.
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+| Categoría | Tecnología |
+|---|---|
+| Frontend | React + TypeScript |
+| Backend | Node.js + Express / FastAPI |
+| Base de datos | PostgreSQL |
+| Inteligencia Artificial | Google Gemini (principal), OpenAI (respaldo) |
+| APIs externas de recetas | Spoonacular, Edamam |
+| Diseño UI/UX | Figma |
+| Control de versiones | GitHub (estrategia Git Flow) |
+| Gestión de tareas | Trello / ClickUp |
+| Comunicación | WhatsApp, Google Meet |
+| Documentación | Google Docs / Drive |
+| Redes remotas | Tailscale (entornos locales de base de datos) |
+
+---
+
+## 📖 Descripción del Proyecto
+
+**FoodLoop** es una plataforma web que utiliza inteligencia artificial para generar recetas personalizadas a partir de los ingredientes que el usuario tiene disponibles, con el objetivo de reducir el desperdicio de alimentos en los hogares.
+
+El usuario ingresa los ingredientes con los que cuenta y el sistema, apoyado en modelos de IA (Google Gemini como proveedor principal y OpenAI como respaldo), genera recetas prácticas y adaptadas a esos insumos. La plataforma integra además fuentes de datos externas (Spoonacular, Edamam) para enriquecer las recomendaciones.
+
+---
+
+## 📚 Documentación
+
+Entregables generados durante el proyecto:
+
+- Informe de Avances para Monitoreo y Control de Proyectos TI.
+- Business Model Canvas (socios clave, propuesta de valor, segmentos de usuario).
+- Documento de Design Thinking — fases de Empatizar y Definir, basado en encuesta real a usuarios (14 respuestas).
+- Product Backlog priorizado y definición de roles e hitos (Scrum).
+- Prototipo de alta fidelidad en Figma (wireframes + prototipo interactivo).
+- Bitácora de actividades del equipo.
+- Plan de Acuerdos de Comunicación del Proyecto.
+- Propuesta de algoritmos de Machine Learning aplicados a FoodLoop.
+
+---
+
+## 🏗️ Estructura del Proyecto
+
+```
+FoodLoop/
+├── frontend/          # Aplicación React + TypeScript
+├── backend/           # Servicios Node.js/Express y FastAPI
+├── database/          # Modelo entidad-relación PostgreSQL
+├── docs/              # Documentación técnica y académica
+└── design/            # Wireframes y prototipos de Figma
+```
+
+> Nota: estructura referencial basada en la arquitectura descrita (frontend, backend, base de datos e IA); puede ajustarse según la organización real del repositorio en GitHub.
+
+---
+
+## 👥 Gestión de Recursos Humanos
+
+| Integrante | Rol Principal | Responsabilidades |
+|---|---|---|
+| Josué Atlai Martínez Otero | Líder de Frontend y UX/UI | Wireframes/prototipos en Figma, maquetación responsiva en React, navegación, consumo de API REST |
+| José Agustín Jiménez Castillo | Desarrollador Frontend y Apoyo | Codificación de interfaces en React, estilos de componentes, pruebas de usabilidad |
+| Christian Paúl Rodríguez Pérez | Líder de Backend e IA | Microservicios con FastAPI, integración con patrón Adapter para Google Gemini, lógica de negocio |
+| Jonathan Baldemar Ramírez Reyes | Líder de Base de Datos | Modelo Entidad-Relación en PostgreSQL, optimización de consultas, triggers, seguridad de datos |
+| Todo el equipo | Gestión y Documentación | Redacción y mantenimiento colectivo de documentación técnica, reportes y bitácoras |
+
+---
+
+## 🤝 Gestión de Interesados
+
+Principales interesados (stakeholders) identificados en el proyecto:
+
+- **Equipo de desarrollo:** los cuatro integrantes, responsables de construir y documentar la plataforma.
+- **Usuarios finales:** personas encuestadas (14 respuestas) durante la fase de Empatizar del Design Thinking, cuyas necesidades guían el diseño de la solución.
+- **Docente / evaluador académico:** receptor formal de los entregables y responsable de validar el cumplimiento de objetivos.
+- **Proveedores de servicios externos:** APIs de Spoonacular, Edamam, Google Gemini y OpenAI, como socios clave identificados en el Business Model Canvas.
+
+---
+
+## ⏱️ Gestión del Tiempo
+
+Principales hitos registrados en la bitácora del proyecto:
+
+| Fecha | Actividad |
+|---|---|
+| 28/05/2026 | Reunión de coordinación de roles del equipo |
+| 03/06/2026 | Planeación de requerimientos funcionales y no funcionales |
+| 05/06/2026 | Definición del alcance y visión |
+| 10/06/2026 | Elaboración del Product Backlog |
+| 13/06/2026 | Finalización de investigación, empatía y validación |
+| 16/06/2026 | Diseño de wireframes |
+| 21/06/2026 | Cierre de Requerimientos y Gestión Ágil (Scrum) |
+| 23/06/2026 | Prototipo interactivo en Figma |
+| 30/06/2026 | Elaboración del Informe de Avances |
+
+El cronograma se ha cumplido en tiempo, con la arquitectura técnica como fase actualmente en proceso.
+
+---
+
+## 💰 Gestión de Costos
+
+Al ser un proyecto de carácter académico, no se contemplan costos monetarios formales. Los principales "costos" del proyecto corresponden a:
+
+- Horas de trabajo del equipo.
+- Uso de planes gratuitos/académicos de las APIs externas (Spoonacular, Edamam, Google Gemini, OpenAI).
+- Herramientas de colaboración sin costo (GitHub, Figma, Trello/ClickUp, Google Drive).
+
+---
+
+## 📦 Gestión de Adquisiciones
+
+Las "adquisiciones" del proyecto se centran en la contratación/uso de servicios externos necesarios para el funcionamiento de la plataforma:
+
+- **APIs de recetas:** Spoonacular y Edamam.
+- **Proveedores de IA:** Google Gemini (principal) y OpenAI (respaldo).
+- **Herramientas de infraestructura y colaboración:** GitHub, Figma, Tailscale (para entornos remotos de base de datos).
+
+---
+
+## 💬 Gestión de la Comunicación
+
+| Tipo de comunicación | Frecuencia | Canal | Responsable |
+|---|---|---|---|
+| Actualización de estado (Daily Scrum) | Diaria | WhatsApp / Presencial | Todo el equipo |
+| Seguimiento de tareas | Constante | Trello | Scrum Master / Líder de proyecto |
+| Revisión de código e integración (PR) | Según entregas | GitHub (Git Flow) | Revisor designado |
+| Sincronización técnica y bloqueos | Semanal (Lunes/Jueves) | Google Meet | Líder de proyecto |
+| Prácticas de BD y consultas SQL | A demanda | Tailscale + entorno local | Encargado de base de datos |
+| Redacción y control de reportes | Constante / por sprint | Google Docs / Drive | Todo el equipo |
+
+**Normas clave de convivencia técnica:**
+- Respeto a los tiempos de enfoque profundo (uso de estado "No Molestar" durante codificación).
+- Contacto inmediato reservado solo para bloqueos críticos (caída de base de datos, expiración de credenciales de API).
+- Centralización de decisiones estructurales en Pull Requests o tableros de tareas, no en chats informales.
+- Uso obligatorio de Tailscale para conexiones remotas seguras a entornos de base de datos.
+- Todo Pull Request requiere revisión de un integrante distinto al autor antes del merge.
+
+---
+
+## ⚠️ Gestión de Riesgos
+
+| Riesgo | Impacto | Probabilidad | Acción tomada |
+|---|---|---|---|
+| Retraso en diseño UI/UX por iteraciones de usabilidad | Medio | Media | Reorganización de actividades y revisión semanal del backlog |
+| Integración entre frontend (React) y backend (Node.js/Express) | Alto | Baja | Definición temprana de contratos de API y pruebas de integración |
+
+---
+
+## 📈 Estado Actual
+
+- ✅ Investigación, Empatía y Validación — Completado
+- ✅ Requerimientos y Gestión Ágil (Scrum) — Completado
+- 🔄 Diseño de Interfaz en Figma — En proceso (muy avanzado)
+- 🔄 Arquitectura Técnica y Configuración Base — En proceso
+
+**Próximas actividades:**
+- Finalizar al 100% el prototipo de alta fidelidad en Figma.
+- Continuar el modelado de datos y arquitectura de software (PostgreSQL, Node.js/Express, React).
+- Configurar entornos locales y tablero de monitoreo digital.
+- Reforzar la integración del proveedor de IA en el flujo de generación de recetas.
+- Actualizar la documentación técnica del proyecto.

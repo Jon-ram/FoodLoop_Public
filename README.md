@@ -38,13 +38,11 @@ El alcance contempla el desarrollo completo de la plataforma web (frontend, back
 | Backend | Node.js + Express / FastAPI |
 | Base de datos | PostgreSQL |
 | Inteligencia Artificial | Google Gemini (principal), OpenAI (respaldo) |
-| APIs externas de recetas | Spoonacular, Edamam |
 | Diseño UI/UX | Figma |
 | Control de versiones | GitHub (estrategia Git Flow) |
 | Gestión de tareas | Trello / ClickUp |
 | Comunicación | WhatsApp, Google Meet |
 | Documentación | Google Docs / Drive, Swagger (`/api-docs`) |
-| Redes remotas | Tailscale (entornos locales de base de datos) |
 | Autenticación y seguridad | JWT, bcrypt, express-validator |
 | Carga de archivos | Multer (detección de ingredientes por imagen) |
 | Testing (roadmap) | Jest / Supertest |
@@ -266,9 +264,7 @@ Iniciar servidor (`npm run dev`) y consultar la documentación interactiva en `h
 | Jonathan Baldemar Ramírez Reyes | [@Jon-ram](https://github.com/Jon-ram) | Desarrollador de Bases de Datos |
 | Christian Paúl Rodríguez Pérez | [@ChrisRodriguez-0430](https://github.com/ChrisRodriguez-0430) | Desarrollador Backend |
 | Josué Martínez Otero | [@Josue-Martinez-Otero](https://github.com/Josue-Martinez-Otero) | Desarrollador Frontend |
-| Antonio Ocpaco Dolores | [@agustin963](https://github.com/agustin963) | Documentador |
-
-> Nota: José Agustín Jiménez Castillo consta como Desarrollador Frontend y Apoyo en el Plan de Acuerdos, pero no aparece en el listado de contribuidores del repositorio; Antonio Ocpaco Dolores aparece como Documentador en GitHub sin figurar en la matriz de roles original. Se recomienda validar con el equipo la lista definitiva de integrantes.
+| José Agustín Jiménez Castillo | [@agustin963](https://github.com/agustin963) | Documentador |
 
 ---
 
@@ -308,7 +304,7 @@ El cronograma se ha cumplido en tiempo, con la arquitectura técnica como fase a
 Al ser un proyecto de carácter académico, no se contemplan costos monetarios formales. Los principales "costos" del proyecto corresponden a:
 
 - Horas de trabajo del equipo.
-- Uso de planes gratuitos/académicos de las APIs externas (Spoonacular, Edamam, Google Gemini, OpenAI).
+- Uso de planes gratuitos/académicos de las APIs externas (Google Gemini, OpenAI).
 - Herramientas de colaboración sin costo (GitHub, Figma, Trello/ClickUp, Google Drive).
 
 ---

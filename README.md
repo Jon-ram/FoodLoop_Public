@@ -5,10 +5,7 @@ personalizadas basadas en los ingredientes que el usuario tiene disponibles. El 
 es reducir el desperdicio de alimentos ayudando a las personas a aprovechar al máximo los
 ingredientes en su despensa.
 
-### Modelo entidad relacion
-<img src="image.png">
 
----
 
 ## 🤖 Módulo de Inteligencia Artificial — Extracción de Conocimiento (Proyecto Integrador)
 

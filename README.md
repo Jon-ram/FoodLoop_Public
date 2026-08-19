@@ -289,21 +289,23 @@ Se seleccionaron 2 mecanismos supervisados y 2 no supervisados para esta entrega
 
 ---
 
-##  Documentación del proyecto
+## 📚 Documentación del proyecto
 
-La documentación formal del proyecto se encuentra en los siguientes entregables (PDF/Word) y carpetas
-del repositorio:
+Toda la documentación formal del proyecto está disponible en el repositorio, dentro de la carpeta [`Documentation`](https://github.com/Jon-ram/FoodLoop_Public/tree/main/Documentation):
 
 | Documento | Contenido |
 |---|---|
-| Propuesta de valor / Business Model Canvas | Modelo de negocio, propuesta de valor y segmentos de usuario |
-| Documento de requerimientos | Requerimientos funcionales y no funcionales del sistema |
-| Documento de diseño de base de datos | Modelo entidad-relación y diccionario de datos |
-| Manual/documentación de código | Convenciones, arquitectura y guía técnica para el equipo |
-| `docs/proposals.md` | Las propuestas de mecanismos de ML supervisado y no supervisado evaluadas |
-| `docs/ethics.md` | Ética y sesgos del uso de IA/ML en el proyecto |
-| `docs/ai-usage.md` | Uso de IA generativa en el proceso de desarrollo |
-| Reporte de avance | Bitácora de avances presentada en cada entrega |
+| [Propuesta de valor](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/FoodLoop_Propuestas_de_Valor%20(1).pdf) | Modelo de negocio, propuesta de valor y segmentos de usuario |
+| [Requerimientos](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/FoodLoop_Requerimientos.pdf) | Requerimientos funcionales y no funcionales del sistema |
+| [Documentación técnica](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/Documentaci%C3%B3n%20T%C3%A9cnica%20del%20Proyecto%20Foodloopdocx.pdf) | Arquitectura, base de datos y documentación técnica del sistema |
+| [Documentación de servicios web](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/foodloop_webServices.pdf) | Documentación de la API y los servicios web del sistema |
+| [Estimación de esfuerzo](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/FoodLoop_Estimacion_Esfuerzo.xlsx) | Estimación de esfuerzo de desarrollo del proyecto |
+| [Diagrama de actividades](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/Diagrama_actividades.xlsx) | Diagrama de actividades del proyecto |
+| [Business Model Canvas](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/Reportes/Modelo_Canvas_FoodLoop.pdf) | Socios clave, propuesta de valor y segmentos de usuario |
+| [Informe de avances](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/Reportes/Informe_de_Avances_FoodLoop.pdf) | Informe de avances para monitoreo y control del proyecto |
+| [Bitácora de actividades](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/Reportes/Bit%C3%A1cora%20de%20Actividades%20FoodLoop.pdf) | Bitácora de hitos y actividades del equipo |
+| [Diagramas del proyecto](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/Reportes/Diagramas%20FoodLoop.pdf) | Diagramas de arquitectura y modelo entidad-relación |
+| [Plan de comunicación](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/Reportes/Plan_de_Acuerdos_Completo_FoodLoop_v3.pdf) | Plan de acuerdos de comunicación del equipo |
 
 
 ---

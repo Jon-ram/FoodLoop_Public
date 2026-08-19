@@ -162,21 +162,6 @@ Para mantener el alcance controlado durante el desarrollo se sigue este criterio
 
 ---
 
-## Cronograma del proyecto
-
-| Fase | Entregable principal | Estado |
-|---|---|---|
-| Fase 1 — Design Thinking | Empatía, definición del problema, encuestas y HMW | ✅ Completado |
-| Fase 2 — Documentación base | Requerimientos, Business Model Canvas, diagramas de arquitectura | ✅ Completado |
-| Fase 3 — Desarrollo del MVP | Registro, IA de recetas, despensa, presupuesto, lista de compra | ✅ Completado |
-| Fase 4 — Extracción de conocimiento | Simulación de datos, ETL, EDA, entrenamiento de modelos de ML | ⏳ En progreso |
-| Fase 5 — Integración y dashboard | Endpoints de inferencia, dashboard en tiempo real, pruebas | ⏳ Pendiente |
-| Fase 6 — Entrega final | Documentación completa, presentación y demo | ⏳ Pendiente |
-
-> Ajusta las fechas específicas de cada fase según el calendario real de tu materia/entrega.
-
----
-
 ##  Metodología de trabajo
 
 El equipo trabaja bajo metodología ágil (**Scrum**) adaptada al contexto académico:

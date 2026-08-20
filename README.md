@@ -285,7 +285,7 @@ Prototipos y versiones del producto:
 
 ---
 
-## 📚 Documentación del proyecto
+##  Documentación del proyecto
 
 Toda la documentación formal del proyecto está disponible en el repositorio, dentro de la carpeta [`Documentation`](https://github.com/Jon-ram/FoodLoop_Public/tree/main/Documentation):
 
@@ -306,22 +306,6 @@ Toda la documentación formal del proyecto está disponible en el repositorio, d
 
 ---
 
-##  Gestión de recursos humanos
-
-Equipo de trabajo del proyecto y rol asignado dentro del desarrollo:
-
-| Integrante | Rol principal | Responsabilidades | GitHub |
-|---|---|---|---|
-| Josué Atlai Martínez Otero | Líder de Frontend y UX/UI | Wireframes/prototipos en Figma, maquetación responsiva en React, navegación, consumo de API | [@Josue-Martinez-Otero](https://github.com/Josue-Martinez-Otero) |
-| José Agustín Jiménez Castillo | Desarrollador Frontend y Documentador | Codificación de interfaces en React, estilos de componentes, documentación funcional y de soporte | [@agustin963](https://github.com/agustin963) |
-| Christian Paúl Rodríguez Pérez | Líder de Backend e IA | Lógica de negocio, integración con servicios de IA generativa | [@ChrisRodriguez-0430](https://github.com/ChrisRodriguez-0430) |
-| Jonathan Baldemar Ramírez Reyes | Líder de Base de Datos / Documentación | Diseño de datos, documentación técnica y de gestión del proyecto | [@Jon-ram](https://github.com/Jon-ram) |
-| Todo el equipo | Gestión y documentación | Redacción y mantenimiento colectivo de documentación, reportes y bitácoras | — |
-
-La coordinación del equipo sigue **Git Flow** sobre GitHub: ramas de feature por integrante, revisión
-antes de integrar a `develop`, y `main` reservada para versiones estables/entregables.
-
----
 
 ##  Estado de funcionalidades
 
@@ -353,6 +337,15 @@ antes de integrar a `develop`, y `main` reservada para versiones estables/entreg
 5. Endurecer el flujo de envío de emails en producción.
 
 ---
+
+## Contribuidores
+
+|Integrante|Contacto|Rol|
+|----------|-------|---|
+|Jonathan Baldemar Ramirez Reyes|[@Jon-ram](https://github.com/Jon-ram)|Desarrollador de DataBases|
+|Christian Paul Rodriguez Perez|[@ChrisRodriguez-0430](https://github.com/ChrisRodriguez-0430)|Desarrollador BackEnd y LLM|
+|Josue Martinez Otero|[@Josue-Martinez-Otero](https://github.com/Josue-Martinez-Otero)|Desarrollador FontEnd|
+|Jose Agustin Jimenez Castillo|[@agustin963](https://github.com/agustin963)|Ingeniero de software en el desarrollo de Wear OS |
 
 **Universidad Tecnológica de Xicotepec de Juárez — Tecnologías de la Información**
 Ingeniería en Desarrollo y Gestión de Software — Grupo 9B

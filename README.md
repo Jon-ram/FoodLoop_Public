@@ -261,6 +261,19 @@ Se seleccionaron 2 mecanismos supervisados y 2 no supervisados para esta entrega
 
 ---
 
+## 🎨 Modelos de alta fidelidad
+ 
+Prototipos y versiones del producto:
+ 
+| Modelo | Enlace |
+|---|---|
+| Prototipo de alta fidelidad (Figma) |  |
+| Versión web | [Ver]() |
+| Versión móvil | [Ver]() |
+| Versión smartwatch | [Ver]() |
+ 
+---
+
 
 ##  Seguridad
 

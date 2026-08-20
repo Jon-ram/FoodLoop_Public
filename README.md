@@ -261,18 +261,16 @@ Se seleccionaron 2 mecanismos supervisados y 2 no supervisados para esta entrega
 
 ---
 
-##  Modelos de alta fidelidad
+## Modelos de alta fidelidad
  
 Prototipos y versiones del producto:
  
 | Modelo | Enlace |
 |---|---|
-| Prototipo de alta fidelidad (Figma) |  |
-| Versión web | [Ver]() |
-| Versión móvil | [Ver]() |
-| Versión smartwatch | [Ver]() |
- 
----
+| Prototipo de alta fidelidad (Figma) | [Ver en Figma](https://www.figma.com/design/3ULsuEsxu20uYFEtoq3jGw/FoodLoop?node-id=0-1&t=3SVNSh5daCMtQzkF-1) |
+| Versión web | [Ver](https://www.figma.com/design/3ULsuEsxu20uYFEtoq3jGw/FoodLoop?node-id=0-1&t=3SVNSh5daCMtQzkF-1) |
+| Versión móvil | [Ver](https://www.figma.com/design/3ULsuEsxu20uYFEtoq3jGw/FoodLoop?node-id=0-1&t=3SVNSh5daCMtQzkF-1) |
+| Versión smartwatch | [Ver](https://www.figma.com/design/3ULsuEsxu20uYFEtoq3jGw/FoodLoop?node-id=0-1&t=3SVNSh5daCMtQzkF-1) |
 
 
 ##  Seguridad

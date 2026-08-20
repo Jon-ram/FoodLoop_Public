@@ -261,7 +261,7 @@ Se seleccionaron 2 mecanismos supervisados y 2 no supervisados para esta entrega
 
 ---
 
-## 🎨 Modelos de alta fidelidad
+##  Modelos de alta fidelidad
  
 Prototipos y versiones del producto:
  

@@ -302,6 +302,7 @@ Toda la documentación formal del proyecto está disponible en el repositorio, d
 | [Diagramas del proyecto](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/Reportes/Diagramas%20FoodLoop.pdf) | Diagramas de arquitectura y modelo entidad-relación |
 | [Plan de comunicación](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/Reportes/Plan_de_Acuerdos_Completo_FoodLoop_v3.pdf) | Plan de acuerdos de comunicación del equipo |
 | [Buenas Practicas y Roles](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/FoodLoop_Buenas_Practicas_Roles.pdf) | Buenas prácticas y matriz de roles y responsabilidades del equipo |
+| [Analisis de costos](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/FoodLoop_Analisis_de_Costos.pdf) | Costos estimados para el desarrollo, operación y mantenimiento del proyecto |
 
 
 

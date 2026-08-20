@@ -302,6 +302,8 @@ Toda la documentación formal del proyecto está disponible en el repositorio, d
 | [Bitácora de actividades](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/Reportes/Bit%C3%A1cora%20de%20Actividades%20FoodLoop.pdf) | Bitácora de hitos y actividades del equipo |
 | [Diagramas del proyecto](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/Reportes/Diagramas%20FoodLoop.pdf) | Diagramas de arquitectura y modelo entidad-relación |
 | [Plan de comunicación](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/Reportes/Plan_de_Acuerdos_Completo_FoodLoop_v3.pdf) | Plan de acuerdos de comunicación del equipo |
+| [Buenas Practicas y Roles](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/FoodLoop_Buenas_Practicas_Roles.pdf) | Buenas prácticas y matriz de roles y responsabilidades del equipo |
+
 
 
 ---

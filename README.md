@@ -24,7 +24,7 @@ Ingeniería en Desarrollo y Gestión de Software, grupo 9B.
 
 ---
 
-## 📌 Descripción del proyecto
+## Descripción del proyecto
 
 FoodLoop nace como respuesta a un problema cotidiano: gran parte de los alimentos que se compran
 terminan por vencerse sin usarse, generando desperdicio de comida y gasto innecesario. La plataforma
@@ -267,7 +267,6 @@ Prototipos y versiones del producto:
  
 | Modelo | Enlace |
 |---|---|
-| Prototipo de alta fidelidad (Figma) | [Ver en Figma](https://www.figma.com/design/3ULsuEsxu20uYFEtoq3jGw/FoodLoop?node-id=0-1&t=3SVNSh5daCMtQzkF-1) |
 | Versión web | [Ver](https://www.figma.com/design/3ULsuEsxu20uYFEtoq3jGw/FoodLoop?node-id=0-1&t=3SVNSh5daCMtQzkF-1) |
 | Versión móvil | [Ver](https://www.figma.com/design/3ULsuEsxu20uYFEtoq3jGw/FoodLoop?node-id=0-1&t=3SVNSh5daCMtQzkF-1) |
 | Versión smartwatch | [Ver](https://www.figma.com/design/3ULsuEsxu20uYFEtoq3jGw/FoodLoop?node-id=0-1&t=3SVNSh5daCMtQzkF-1) |

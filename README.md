@@ -290,6 +290,7 @@ Toda la documentación formal del proyecto está disponible en el repositorio, d
 
 | Documento | Contenido |
 |---|---|
+| [Planeacion FoodLoop](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/Planeacion_FoodLoop.pdf) | Etapas de planeacion del proyecto de foodloop|
 | [Propuesta de valor](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/FoodLoop_Propuestas_de_Valor%20(1).pdf) | Modelo de negocio, propuesta de valor y segmentos de usuario |
 | [Requerimientos](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/FoodLoop_Requerimientos.pdf) | Requerimientos funcionales y no funcionales del sistema |
 | [Documentación técnica](https://github.com/Jon-ram/FoodLoop_Public/blob/main/Documentation/Documentaci%C3%B3n%20T%C3%A9cnica%20del%20Proyecto%20Foodloopdocx.pdf) | Arquitectura, base de datos y documentación técnica del sistema |

@@ -331,6 +331,14 @@ Toda la documentación formal del proyecto está disponible en el repositorio, d
 
 ---
 
+## Modelo Canvas del Proyecto
+
+A continuación se muestra el modelo canvas que define la propuesta de valor y estructura de FoodLoop:
+
+<p align="center">
+  <img src="Documentation/Modelo_Canvas_FoodLoop.png" alt="Modelo Canvas de FoodLoop" width="800">
+</p>
+
 ##  Próximas mejoras
 
 1. Finalizar la versión móvil y de smartwatch, actualmente casi completa.
